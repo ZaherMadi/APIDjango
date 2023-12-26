@@ -2,7 +2,7 @@ from django.db import models
 
 class Concessionnaire(models.Model):
     nom = models.CharField(max_length=100)
-    numero_siret = models.IntegerField()
+    siret = models.IntegerField()
     code_postal = models.CharField(max_length=5)
 
     def __str__(self):
