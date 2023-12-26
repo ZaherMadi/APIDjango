@@ -6,6 +6,7 @@ class ConcessionnaireSerializer(serializers.ModelSerializer):
         model = Concessionnaire
         fields = ['nom', 'siret', 'code_postal']
 
+
 class VoitureSerializer(serializers.ModelSerializer):
     class Meta:
         model = Voiture
