@@ -7,6 +7,11 @@ class ConcessionnaireSerializer(serializers.ModelSerializer):
         fields = ['nom', 'siret', 'code_postal']
 
 
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        representation.pop('siret', None)
+        return representation
+
 class VoitureSerializer(serializers.ModelSerializer):
     class Meta:
         model = Voiture
